@@ -30,5 +30,16 @@ time {
 }
 
 input {
-    z-index: -9999;
+  z-index: -9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* opacity: 0; */
+  pointer-events: none;
+}
+
+p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 8px;
 }
