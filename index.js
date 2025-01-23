@@ -69,6 +69,9 @@ function onKeyUp(e) {
     const letterClass = isCorrect ? "correct" : "incorrect";
     $letter.classList.add(letterClass);
   });
+  $currentLetter.classList.remove("active");
+  const inputLength = $input.value.length;
+  $allLetters[inputLength].classList.add("active");
 }
 
 function gameOver() {}
