@@ -1,11 +1,12 @@
 :root {
   color-scheme: light dark;
-  --background-color: #000;
-  --text-color: #fff;
+  --green: #00b755;
+  --yellow: #daaf38;
+  --red: #ca4754;
+  --black: #222;
+  --gray: #999;
 }
 
 body {
   font-family: sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
 }
