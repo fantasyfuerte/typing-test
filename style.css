@@ -55,5 +55,18 @@ letter {
     color: var(--yellow);
     position: absolute;
     left: -65%;
+    transform: scaleY(1.2);
+    animation: 1s blink infinite ease-in-out;
+  }
+}
+
+@keyframes blink {
+  0%,
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
   }
 }
