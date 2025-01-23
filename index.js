@@ -53,9 +53,22 @@ function onKeyDown(e) {}
 function onKeyUp(e) {
   const $currentWord = $paragraph.querySelector("word.active");
   const $currentLetter = $currentWord.querySelector("letter.active");
-  if (e.key === $currentLetter.innerText) {
-    
-  }
+  const currentWord = $currentWord.innerText.trim();
+  $input.maxLength = currentWord.length;
+
+  const $allLetters = $currentWord.querySelectorAll("letter");
+  $allLetters.forEach((letter) =>
+    letter.classList.remove("correct", "incorrect")
+  );
+
+  $input.value.split("").forEach((letter, index) => {
+    const $letter = $allLetters[index];
+    const letterToCheck = currentWord[index];
+
+    const isCorrect = letter === letterToCheck;
+    const letterClass = isCorrect ? "correct" : "incorrect";
+    $letter.classList.add(letterClass);
+  });
 }
 
 function gameOver() {}

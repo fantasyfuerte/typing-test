@@ -60,6 +60,14 @@ letter {
   }
 }
 
+.correct {
+  color: var(--green);
+}
+
+.incorrect {
+  color: var(--red);
+}
+
 @keyframes blink {
   0%,
   25% {
