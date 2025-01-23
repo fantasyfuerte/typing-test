@@ -29,6 +29,9 @@ function initGame() {
   const interval = setInterval(() => {
     currentTime--;
     $time.textContent = currentTime;
+    if (currentTime === 0) {
+      clearInterval(interval);
+    }
   }, 1000);
 }
 function initEvents() {}
