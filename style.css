@@ -48,9 +48,12 @@ p {
 
 letter {
   color: var(--gray);
+  position: relative;
 
   &.active::before {
     content: "|";
     color: var(--yellow);
+    position: absolute;
+    left: -65%;
   }
 }
