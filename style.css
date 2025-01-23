@@ -58,14 +58,12 @@ letter {
     transform: scaleY(1.2);
     animation: 1s blink infinite ease-in-out;
   }
-}
-
-.correct {
-  color: var(--green);
-}
-
-.incorrect {
-  color: var(--red);
+  &.correct {
+    color: var(--green);
+  }
+  &.incorrect {
+    color: var(--red);
+  }
 }
 
 @keyframes blink {
