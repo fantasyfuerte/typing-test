@@ -20,7 +20,7 @@ section {
   display: flex;
   flex-direction: column;
   padding: 16px;
-  gap: 8px;
+  gap: 4px;
   max-width: 500px;
 }
 
@@ -42,4 +42,15 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 3px 8px;
+  margin: 0;
+  font-size: 20px;
+}
+
+letter {
+  color: var(--gray);
+
+  &.active::before {
+    content: "|";
+    color: var(--yellow);
+  }
 }

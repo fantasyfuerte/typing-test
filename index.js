@@ -17,6 +17,7 @@ function initGame() {
   words = text.split(" ").slice(0, 32);
   currentTime = INITIAL_TIME;
   $time.textContent = currentTime;
+
   $paragraph.innerHTML = words
     .map((word, index) => {
       const letters = word.split("");
@@ -25,6 +26,10 @@ function initGame() {
     </word>`;
     })
     .join("");
+
+  const $firstWord = $paragraph.querySelector("word");
+  $firstWord.classList.add("active");
+  $firstWord.querySelector("letter").classList.add("active");
 
   const interval = setInterval(() => {
     currentTime--;
@@ -37,6 +42,4 @@ function initGame() {
 }
 function initEvents() {}
 
-function gameOver() {
-  alert("Game Over");
-}
+function gameOver() {}
