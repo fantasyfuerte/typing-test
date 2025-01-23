@@ -15,3 +15,20 @@ body {
   padding: 32px;
   margin-top: 32px;
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 8px;
+  max-width: 500px;
+}
+
+time {
+  font-size: 32px;
+  color: var(--yellow);
+}
+
+input {
+    z-index: -9999;
+}

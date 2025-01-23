@@ -17,5 +17,11 @@ function initGame() {
   words = text.split(" ").slice(0, 32);
   currentTime = INITIAL_TIME;
   $time.textContent = currentTime;
+  $paragraph.innerHTML = words.map((word, index) => {
+    const letters = word.split("");
+    return `<word>
+    ${letters.map((letter) => `<letter>${letter}</letter>`).join("")}
+    </word>`;
+  }).join("");
 }
 function initEvents() {}
