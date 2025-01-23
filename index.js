@@ -31,7 +31,12 @@ function initGame() {
     $time.textContent = currentTime;
     if (currentTime === 0) {
       clearInterval(interval);
+      gameOver();
     }
   }, 1000);
 }
 function initEvents() {}
+
+function gameOver() {
+  alert("Game Over");
+}
