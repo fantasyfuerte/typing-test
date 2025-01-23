@@ -13,5 +13,9 @@ let currentTime = INITIAL_TIME;
 initGame();
 initEvents();
 
-function initGame() {}
+function initGame() {
+  words = text.split(" ").slice(0, 32);
+  currentTime = INITIAL_TIME;
+  $time.textContent = currentTime;
+}
 function initEvents() {}
