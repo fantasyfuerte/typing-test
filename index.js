@@ -56,12 +56,15 @@ function onKeyDown(e) {
     e.preventDefault();
     const $nextWord = $currentWord.nextElementSibling;
     const $nextLetter = $nextWord.querySelector("letter");
+    const $input = document.querySelector("input");
 
     $currentWord.classList.remove("active");
     $currentLetter.classList.remove("active");
 
     $nextWord.classList.add("active");
     $nextLetter.classList.add("active");
+
+    $input.value = "";
   }
 }
 
