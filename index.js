@@ -9,7 +9,7 @@ const $game = document.querySelector("#game");
 const $wpm = document.querySelector("#wpm");
 const $accuracy = document.querySelector("#accuracy");
 
-const INITIAL_TIME = 3;
+const INITIAL_TIME = 30;
 
 const text = initialWords
   .toSorted(() => Math.random() - 0.5)
@@ -141,6 +141,16 @@ function onKeyUp() {
 }
 
 function gameOver() {
-  $results.style.display = "block";
+  $results.style.display = "flex";
   $game.style.display = "none";
+
+  const correctWords = $paragraph.querySelectorAll("word.correct").length;
+  const correctLetters = $paragraph.querySelectorAll("letter.correct").length;
+  const incorrectLetters =
+    $paragraph.querySelectorAll("letter.incorrect").length;
+  const totalLetters = correctLetters + incorrectLetters;
+  const accuracy =
+    totalLetters === 0 ? 0 : Math.round((correctLetters / totalLetters) * 100);
+
+  $accuracy.textContent = accuracy + "%";
 }
