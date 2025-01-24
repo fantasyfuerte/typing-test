@@ -4,6 +4,11 @@ const $time = document.querySelector("time");
 const $paragraph = document.querySelector("p");
 const $input = document.querySelector("input");
 
+const $results = document.querySelector("#results");
+const $game = document.querySelector("#game");
+const $wpm = document.querySelector("#wpm");
+const $accuracy = document.querySelector("#accuracy");
+
 const INITIAL_TIME = 3;
 
 const text = initialWords
@@ -136,8 +141,6 @@ function onKeyUp() {
 }
 
 function gameOver() {
-  const $results = document.querySelector("#results");
   $results.style.display = "block";
-  const $game = document.querySelector("#game");
   $game.style.display = "none";
 }
