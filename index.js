@@ -69,11 +69,13 @@ function onKeyUp(e) {
     const letterClass = isCorrect ? "correct" : "incorrect";
     $letter.classList.add(letterClass);
   });
-  $currentLetter.classList.remove("active");
+  $currentLetter.classList.remove("active", "is-last");
   const inputValueLength = $input.value.length;
   const $nextActiveLetter = $allLetters[inputValueLength];
   if ($nextActiveLetter) {
     $nextActiveLetter.classList.add("active");
+  } else {
+    $currentLetter.classList.add("active", "is-last");
   }
 }
 
