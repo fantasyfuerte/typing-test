@@ -4,7 +4,7 @@ const $time = document.querySelector("time");
 const $paragraph = document.querySelector("p");
 const $input = document.querySelector("input");
 
-const INITIAL_TIME = 30;
+const INITIAL_TIME = 3;
 
 const text = initialWords
   .toSorted(() => Math.random() - 0.5)
@@ -135,4 +135,9 @@ function onKeyUp() {
   }
 }
 
-function gameOver() {}
+function gameOver() {
+  const $results = document.querySelector("#results");
+  $results.style.display = "block";
+  const $game = document.querySelector("#game");
+  $game.style.display = "none";
+}

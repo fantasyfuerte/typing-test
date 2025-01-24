@@ -107,4 +107,8 @@ word {
 
 #results {
   display: none;
+  color: var(--gray);
+  h3{
+    font-size: 40px;
+  }
 }
