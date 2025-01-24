@@ -71,8 +71,9 @@ letter {
 
 word {
   border-bottom: 2px solid transparent;
+  transition: border-color 0.5s;
   &.marked {
-    border-bottom: 2px solid var(--red);
+    border-color: var(--red);
   }
 }
 
