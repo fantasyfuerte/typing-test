@@ -55,6 +55,7 @@ function onKeyDown(e) {
   if (key === " ") {
     e.preventDefault();
     const $nextWord = $currentWord.nextElementSibling;
+    const $nextLetter = $nextWord.querySelector("letter");
   }
 }
 
