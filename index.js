@@ -71,7 +71,10 @@ function onKeyUp(e) {
   });
   $currentLetter.classList.remove("active");
   const inputValueLength = $input.value.length;
-  $allLetters[inputValueLength].classList.add("active");
+  const $nextActiveLetter = $allLetters[inputValueLength];
+  if ($nextActiveLetter) {
+    $nextActiveLetter.classList.add("active");
+  }
 }
 
 function gameOver() {}
