@@ -58,13 +58,19 @@ function onKeyDown(e) {
     const $nextLetter = $nextWord.querySelector("letter");
     const $input = document.querySelector("input");
 
-    $currentWord.classList.remove("active");
+    $currentWord.classList.remove("active", "marked");
     $currentLetter.classList.remove("active");
 
     $nextWord.classList.add("active");
     $nextLetter.classList.add("active");
 
     $input.value = "";
+
+    const hadMissedLetters =
+      $currentWord.querySelectorAll("letter:not(.correct)").length > 0;
+
+    const classToAdd = hadMissedLetters ? "marked" : "correct";
+    $currentWord.classList.add(classToAdd);
   }
 }
 
