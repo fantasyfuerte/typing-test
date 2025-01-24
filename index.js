@@ -48,9 +48,11 @@ function initEvents() {
   });
 }
 
-function onKeyDown(e) {}
+function onKeyDown(e) {
+  const { key } = e;
+}
 
-function onKeyUp(e) {
+function onKeyUp() {
   const $currentWord = $paragraph.querySelector("word.active");
   const $currentLetter = $currentWord.querySelector("letter.active");
   const currentWord = $currentWord.innerText.trim();
