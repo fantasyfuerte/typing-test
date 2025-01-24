@@ -85,6 +85,19 @@ function onKeyDown(e) {
       e.preventDefault();
       $prevWord.classList.remove("marked");
       $prevWord.classList.add("active");
+
+      const $letterToGo = $prevWord.querySelector("letter:last-child");
+      $currentLetter.classList.remove("active");
+      $letterToGo.classList.add("active");
+
+      $input.value = [
+        ...$prevWord.querySelectorAll("letter.correct, letter.incorrect"),
+      ]
+        .map((letter) =>
+          letter.classList.contains("correct") ? letter.innerText : "."
+        )
+        .join("");
+      console.log($input.value);
     }
   }
 }
