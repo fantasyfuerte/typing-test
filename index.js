@@ -1,4 +1,4 @@
-import {words} from "./data.js";
+import { words as initialWords } from "./data.js";
 
 const $time = document.querySelector("time");
 const $paragraph = document.querySelector("p");
@@ -6,8 +6,10 @@ const $input = document.querySelector("input");
 
 const INITIAL_TIME = 30;
 
-const text =
-  "the quick brown fox jumps over the lazy dog and then the dog jumps over the lazy fox right after the fox jumps over the lazy dog but then a frog jumps into the scene to see what happens";
+const text = initialWords
+  .toSorted(() => Math.random() - 0.5)
+  .slice(0, 32)
+  .join(" ");
 
 let words = [];
 let currentTime = INITIAL_TIME;

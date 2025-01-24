@@ -19,7 +19,7 @@ section {
   justify-content: center;
   align-items: center;
   p {
-    width: 500px;
+    max-width: 500px;
   }
   time {
     margin-bottom: 100px;
