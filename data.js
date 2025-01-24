@@ -171,5 +171,5 @@ export const words = [
   "should",
   "only",
   "tell",
-  "about"
-]
+  "about",
+];
