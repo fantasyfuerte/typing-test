@@ -74,7 +74,12 @@ function onKeyDown(e) {
 
     if (key === "Backspace") {
       const $prevWord = $currentWord.previousElementSibling;
-      const $prevLetter = $prevWord.querySelector("letter");
+      const $prevLetter = $currentLetter.previousElementSibling;
+
+      if (!$prevWord && !$prevLetter) {
+        e.preventDefault();
+        return;
+      }
     }
   }
 }
