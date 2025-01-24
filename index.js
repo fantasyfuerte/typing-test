@@ -70,8 +70,8 @@ function onKeyUp(e) {
     $letter.classList.add(letterClass);
   });
   $currentLetter.classList.remove("active");
-  const inputLength = $input.value.length;
-  $allLetters[inputLength].classList.add("active");
+  const inputValueLength = $input.value.length;
+  $allLetters[inputValueLength].classList.add("active");
 }
 
 function gameOver() {}
