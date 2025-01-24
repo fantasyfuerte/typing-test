@@ -48,9 +48,27 @@ function initEvents() {
   });
 }
 
-function onKeyDown(e) {}
+function onKeyDown(e) {
+  const $currentWord = $paragraph.querySelector("word.active");
+  const $currentLetter = $currentWord.querySelector("letter.active");
+  const { key } = e;
+  if (key === " ") {
+    e.preventDefault();
+    const $nextWord = $currentWord.nextElementSibling;
+    const $nextLetter = $nextWord.querySelector("letter");
+    const $input = document.querySelector("input");
 
-function onKeyUp(e) {
+    $currentWord.classList.remove("active");
+    $currentLetter.classList.remove("active");
+
+    $nextWord.classList.add("active");
+    $nextLetter.classList.add("active");
+
+    $input.value = "";
+  }
+}
+
+function onKeyUp() {
   const $currentWord = $paragraph.querySelector("word.active");
   const $currentLetter = $currentWord.querySelector("letter.active");
   const currentWord = $currentWord.innerText.trim();
