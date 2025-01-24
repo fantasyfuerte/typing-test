@@ -56,6 +56,12 @@ function onKeyDown(e) {
     e.preventDefault();
     const $nextWord = $currentWord.nextElementSibling;
     const $nextLetter = $nextWord.querySelector("letter");
+
+    $currentWord.classList.remove("active");
+    $currentLetter.classList.remove("active");
+
+    $nextWord.classList.add("active");
+    $nextLetter.classList.add("active");
   }
 }
 
