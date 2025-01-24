@@ -8,7 +8,7 @@ const INITIAL_TIME = 30;
 
 const text = initialWords
   .toSorted(() => Math.random() - 0.5)
-  .slice(0, 32)
+  .slice(0, 50)
   .join(" ");
 
 let words = [];
@@ -18,7 +18,7 @@ initGame();
 initEvents();
 
 function initGame() {
-  words = text.split(" ").slice(0, 32);
+  words = text.split(" ")
   currentTime = INITIAL_TIME;
   $time.textContent = currentTime;
 

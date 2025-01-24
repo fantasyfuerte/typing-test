@@ -22,7 +22,7 @@ section {
     max-width: 500px;
   }
   time {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     font-size: 50px;
     color: var(--yellow);
     animation: timer 1s infinite;
