@@ -49,7 +49,13 @@ function initEvents() {
 }
 
 function onKeyDown(e) {
+  const $currentWord = $paragraph.querySelector("word.active");
+  const $currentLetter = $currentWord.querySelector("letter.active");
   const { key } = e;
+  if (key === " ") {
+    e.preventDefault();
+    const $nextWord = $currentWord.nextElementSibling;
+  }
 }
 
 function onKeyUp() {
