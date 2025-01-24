@@ -71,6 +71,11 @@ function onKeyDown(e) {
 
     const classToAdd = hadMissedLetters ? "marked" : "correct";
     $currentWord.classList.add(classToAdd);
+
+    if (key === "Backspace") {
+      const $prevWord = $currentWord.previousElementSibling;
+      const $prevLetter = $prevWord.querySelector("letter");
+    }
   }
 }
 
