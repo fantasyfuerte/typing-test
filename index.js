@@ -24,6 +24,7 @@ initGame();
 initEvents();
 
 function initGame() {
+  $input.value = "";
   $game.style.display = "flex";
   $results.style.display = "none";
   words = text.split(" ");
