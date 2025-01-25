@@ -145,12 +145,16 @@ function gameOver() {
   $game.style.display = "none";
 
   const correctWords = $paragraph.querySelectorAll("word.correct").length;
+  const incorrectWords = $paragraph.querySelectorAll("word.marked").length;
+  const writtenWords = correctWords + incorrectWords;
   const correctLetters = $paragraph.querySelectorAll("letter.correct").length;
   const incorrectLetters =
     $paragraph.querySelectorAll("letter.incorrect").length;
   const totalLetters = correctLetters + incorrectLetters;
   const accuracy =
     totalLetters === 0 ? 0 : Math.round((correctLetters / totalLetters) * 100);
+  const wpm = Math.round(60 / INITIAL_TIME) * writtenWords;
 
   $accuracy.textContent = accuracy + "%";
+  $wpm.textContent = wpm;
 }
