@@ -10,7 +10,7 @@ const $wpm = document.querySelector("#wpm");
 const $accuracy = document.querySelector("#accuracy");
 const $button = document.querySelector("#reload-button");
 
-const INITIAL_TIME = 3;
+const INITIAL_TIME = 30;
 
 const text = initialWords
   .toSorted(() => Math.random() - 0.5)
