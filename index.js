@@ -24,6 +24,7 @@ initGame();
 initEvents();
 
 function initGame() {
+  $results.style.display = "none";
   words = text.split(" ");
   currentTime = INITIAL_TIME;
   $time.textContent = currentTime;
