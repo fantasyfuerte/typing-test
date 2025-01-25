@@ -118,6 +118,7 @@ word {
     color: var(--green);
     border: 2px solid var(--green);
     border-radius: 5px;
+    transition: background-color 0.5s;
   }
   button:hover {
     background-color: var(--green);
