@@ -8,6 +8,7 @@ const $results = document.querySelector("#results");
 const $game = document.querySelector("#game");
 const $wpm = document.querySelector("#wpm");
 const $accuracy = document.querySelector("#accuracy");
+const $button = document.querySelector("#reload-button");
 
 const INITIAL_TIME = 3;
 
