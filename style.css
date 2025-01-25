@@ -108,7 +108,19 @@ word {
 #results {
   display: none;
   color: var(--gray);
-  h3{
+  h3 {
     font-size: 40px;
+    color: var(--yellow);
+  }
+  button {
+    padding: 4px 10px;
+    background-color: var(--black);
+    color: var(--green);
+    border: 2px solid var(--green);
+    border-radius: 5px;
+  }
+  button:hover {
+    background-color: var(--green);
+    color: var(--black);
   }
 }
