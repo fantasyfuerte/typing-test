@@ -23,7 +23,10 @@ let currentTime = INITIAL_TIME;
 initGame();
 initEvents();
 
+$button.addEventListener("click", initGame);
+
 function initGame() {
+  $game.style.display = "flex";
   $results.style.display = "none";
   words = text.split(" ");
   currentTime = INITIAL_TIME;
