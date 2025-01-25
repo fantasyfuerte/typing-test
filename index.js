@@ -23,8 +23,6 @@ let currentTime = INITIAL_TIME;
 initGame();
 initEvents();
 
-$button.addEventListener("click", initGame);
-
 function initGame() {
   $game.style.display = "flex";
   $results.style.display = "none";
@@ -59,6 +57,7 @@ function initEvents() {
     $input.focus();
     $input.addEventListener("keydown", onKeyDown);
     $input.addEventListener("keyup", onKeyUp);
+    $button.addEventListener("click", initGame);
   });
 }
 
