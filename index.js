@@ -10,6 +10,8 @@ const $wpm = document.querySelector("#wpm");
 const $accuracy = document.querySelector("#accuracy");
 const $button = document.querySelector("#reload-button");
 
+const $startButton = document.querySelector("#start-button");
+
 const INITIAL_TIME = 30;
 
 const text = initialWords
@@ -20,10 +22,11 @@ const text = initialWords
 let words = [];
 let currentTime = INITIAL_TIME;
 
-initGame();
+$startButton.addEventListener("click", initGame);
 initEvents();
 
 function initGame() {
+  $startButton.style.display = "none";
   $input.value = "";
   $game.style.display = "flex";
   $results.style.display = "none";
