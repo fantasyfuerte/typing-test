@@ -1,10 +1,10 @@
 :root {
   color-scheme: light dark;
-  --green: #00b755;
-  --yellow: #daaf38;
-  --red: #ca4754;
-  --black: #222;
-  --gray: #999;
+  --green: #00b722;
+  --yellow: #e5de27;
+  --red: #e23c4c;
+  --black: #1d1c1c;
+  --gray: #c2c2c2;
 }
 
 body {
@@ -106,6 +106,7 @@ word {
 }
 
 #results {
+  margin-top: 100px;
   display: none;
   color: var(--gray);
   h3 {
@@ -124,4 +125,21 @@ word {
     background-color: var(--green);
     color: var(--black);
   }
+}
+
+main{
+  display: flex;
+  justify-content: center;
+}
+
+#start-button {
+  padding: 4px 10px;
+  background-color: var(--black);
+  color: var(--green);
+  border: 2px solid var(--green);
+  border-radius: 5px;
+  transition: background-color 0.5s;
+  font-size: 30px;
+  height: fit-content;
+  margin-top: 200px;
 }
